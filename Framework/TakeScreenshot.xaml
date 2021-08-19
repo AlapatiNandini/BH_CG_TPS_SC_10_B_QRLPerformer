@@ -1,0 +1,128 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TakeScreenshot" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Folder" Type="InArgument(x:String)" />
+    <x:Property Name="io_FilePath" Type="InOutArgument(x:String)" />
+    <x:Property Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>586,1331</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TakeScreenshot_2</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="22">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Screenshot sequence" sap:VirtualizedContainerService.HintSize="526,1266" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:Image" Name="screenshot" />
+      <Variable x:TypeArguments="x:String" Name="EmailUsername" />
+      <Variable x:TypeArguments="ss:SecureString" Name="EmailPassword" />
+      <Variable x:TypeArguments="x:String" Name="PlainTxtPassword" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take screenshot" sap:VirtualizedContainerService.HintSize="484,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[screenshot]">
+      <ui:TakeScreenshot.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+      </ui:TakeScreenshot.Target>
+    </ui:TakeScreenshot>
+    <If Condition="[String.IsNullOrEmpty(in_Folder)]" DisplayName="If no folder specified" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Assign DisplayName="Assign the project folder" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[in_Folder]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Path.Combine(IO.Directory.GetCurrentDirectory(),"screenshots").ToString()]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Then>
+    </If>
+    <If Condition="[String.IsNullOrEmpty(io_filePath)]" DisplayName="If no file path" sap:VirtualizedContainerService.HintSize="484,208" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Assign DisplayName="Make file path" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[io_FilePath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Path.Combine(in_Folder, "ExceptionScreenshot_"+Now.ToString("yyMMdd.HHmmss")+".png")]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Then>
+    </If>
+    <ui:SaveImage DisplayName="Save screenshot" FileName="[io_FilePath]" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="SaveImage_1" Image="[screenshot]" />
+    <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Screenshot saved at: &quot;+io_FilePath]" />
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="BH_SC_17_1_Email_Credential" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[EmailPassword]" Username="[EmailUsername]" />
+    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[PlainTxtPassword]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[new System.Net.NetworkCredential(String.Empty,EmailPassword).Password]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="Attached the screenshot of the exception occurred" DisplayName="Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" From="[in_Config(&quot;EmailAccount&quot;).ToString]" sap:VirtualizedContainerService.HintSize="484,145" sap2010:WorkflowViewState.IdRef="SendExchangeMail_1" IsBodyHtml="False" IsDraft="False" Password="[PlainTxtPassword]" SaveCopy="False" Server="[in_Config(&quot;SMTPServer&quot;).ToString]" Subject="Exception occured during QRL Performer bot" To="[in_Config(&quot;DeveloperEmail&quot;).ToString]" User="[EmailUsername]">
+      <ui:SendExchangeMail.Files>
+        <InArgument x:TypeArguments="x:String">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="io_FilePath" />
+        </InArgument>
+      </ui:SendExchangeMail.Files>
+    </ui:SendExchangeMail>
+  </Sequence>
+</Activity>

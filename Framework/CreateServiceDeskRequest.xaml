@@ -1,0 +1,355 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateServiceDeskRequest" this:CreateServiceDeskRequest.In_ErrorMessage="Action failed to execute as expected" this:CreateServiceDeskRequest.In_ProjectId="BH_FIN_25_1_Consumer" this:CreateServiceDeskRequest.In_ProcessStartTime="01/26/2021 21:00:11" this:CreateServiceDeskRequest.In_ProcessEndTime="01/26/2021 21:02:46" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_ErrorMessage" Type="InArgument(x:String)" />
+    <x:Property Name="In_ProjectId" Type="InArgument(x:String)" />
+    <x:Property Name="In_ProcessStartTime" Type="InArgument(x:String)" />
+    <x:Property Name="In_ProcessEndTime" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>773,4395</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CreateServiceDeskRequest_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>Microsoft.Office.Interop.Outlook</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Python</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="CreateServiceDeskRequest" sap:VirtualizedContainerService.HintSize="526,4290" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="ResResult" />
+      <Variable x:TypeArguments="x:Int32" Name="stsCode" />
+      <Variable x:TypeArguments="sxl:XDocument" Name="xdoccument" />
+      <Variable x:TypeArguments="sxl:XNamespace" Default="[&quot;http://www.ca.com/UnicenterServicePlus/ServiceDesk&quot;]" Name="xname" />
+      <Variable x:TypeArguments="x:String" Name="SessionId" />
+      <Variable x:TypeArguments="x:String" Name="hanlderResResult" />
+      <Variable x:TypeArguments="x:Int32" Name="handlerstsCode" />
+      <Variable x:TypeArguments="x:String" Name="handlerId" />
+      <Variable x:TypeArguments="x:String" Name="txtCraeteRequest" />
+      <Variable x:TypeArguments="x:String" Name="ResResultCreate" />
+      <Variable x:TypeArguments="x:Int32" Name="stsCodeCreate" />
+      <Variable x:TypeArguments="sxl:XDocument" Name="xDocumentCraete" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="serviceDeskUrl" />
+      <Variable x:TypeArguments="x:String" Name="UserId" />
+      <Variable x:TypeArguments="ss:SecureString" Name="Password" />
+      <Variable x:TypeArguments="x:String" Default="test" Name="summary" />
+      <Variable x:TypeArguments="x:String" Name="Description" />
+      <Variable x:TypeArguments="x:String" Name="jobId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ServiceDeskUrl" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="ui:GenericValue">[serviceDeskUrl]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="ServiceDeskLogin" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[Password]" Username="[UserId]" />
+    <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="XML" Body="[&quot;&lt;Envelope xmlns=&quot;&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&quot;&gt;&lt;Body&gt;&lt;login xmlns=&quot;&quot;http://www.ca.com/UnicenterServicePlus/ServiceDesk&quot;&quot;&gt;&lt;username xmlns=&quot;&quot;&quot;&quot;&gt;&quot;+UserId+&quot;&lt;/username&gt;&lt;password xmlns=&quot;&quot;&quot;&quot;&gt;&quot;+new System.Net.NetworkCredential(string.Empty, Password).Password+&quot;&lt;/password&gt;&lt;/login&gt;&lt;/Body&gt;&lt;/Envelope&gt;&quot;]" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[serviceDeskUrl]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Result="[ResResult]" StatusCode="[stsCode]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">text/xml</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="SOAPAction">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[stsCode]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[ResResult]" />
+    <If Condition="[stsCode=200]" sap:VirtualizedContainerService.HintSize="484,691" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,514" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DeserializeXml DisplayName="Deserialize XML" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeXml_1" XMLDocument="[xdoccument]" XMLString="[ResResult]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[xdoccument.Descendants(xname+&quot;loginResponse&quot;).Elements(&quot;loginReturn&quot;).Value]" />
+          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[SessionId]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[xdoccument.Descendants(xname+"loginResponse").Elements("loginReturn").Value]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[SessionId]" />
+        </Sequence>
+      </If.Then>
+    </If>
+    <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="XML" Body="[&quot;&lt;Envelope xmlns=&quot;&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;&quot;&gt;&lt;Body&gt;&lt;getHandleForUserid xmlns=&quot;&quot;http://www.ca.com/UnicenterServicePlus/ServiceDesk&quot;&quot;&gt;&lt;sid xmlns=&quot;&quot;&quot;&quot;&gt;&quot;+SessionId+&quot;&lt;/sid&gt;&lt;userID xmlns=&quot;&quot;&quot;&quot;&gt;&quot;+UserId+&quot;&lt;/userID&gt;&lt;/getHandleForUserid&gt;&lt;/Body&gt;&lt;/Envelope&gt;&quot;]" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[serviceDeskUrl]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="HttpClient_2" Method="POST" Result="[hanlderResResult]" StatusCode="[handlerstsCode]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">text/xml</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="SOAPAction">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[handlerstsCode.ToString+&quot;/&quot;+hanlderResResult]" />
+    <If Condition="[handlerstsCode=200]" sap:VirtualizedContainerService.HintSize="484,429" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,252" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sxl:XDocument" Name="xDocumentHandler" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DeserializeXml DisplayName="Deserialize XML" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeXml_2" XMLDocument="[xDocumentHandler]" XMLString="[hanlderResResult]" />
+          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[handlerId]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[xDocumentHandler.Descendants(xname+"getHandleForUseridResponse").Elements("getHandleForUseridReturn").Value]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+    </If>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;handlerId:&quot;+handlerId]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,224" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadTextFile Content="[txtCraeteRequest]" DisplayName="Read Text File" FileName="createrequest.txt" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ServiceDeskCreateRequest" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[txtCraeteRequest]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetJobId workflow" sap:VirtualizedContainerService.HintSize="484,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\GetJobId.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_JobID">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="jobId" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,181" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetJobId workflow" sap:VirtualizedContainerService.HintSize="334,89" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="GetJobId.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_JobID">[jobId]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ServiceDeskDescription" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_3">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[Description]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.Format(Description,In_ErrorMessage,In_ProcessStartTime,In_ProcessEndTime,Environment.MachineName,jobId)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Info" Message="[&quot;Description:&quot;+Description]" />
+    <ui:GetRobotAsset TimeoutMS="{x:Null}" AssetName="ServiceDeskSummary" DisplayName="Get Asset" sap:VirtualizedContainerService.HintSize="484,79" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
+      <ui:GetRobotAsset.Value>
+        <OutArgument x:TypeArguments="x:String">[summary]</OutArgument>
+      </ui:GetRobotAsset.Value>
+    </ui:GetRobotAsset>
+    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[summary]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.Format(summary,In_ProjectId,In_ProjectId,Environment.MachineName)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Info" Message="[&quot;summary:&quot;+summary]" />
+    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[txtCraeteRequest]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[String.Format(txtCraeteRequest,SessionId,handlerId,Description,summary,handlerId)]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseHeaders="{x:Null}" Username="{x:Null}" AcceptFormat="XML" Body="[txtCraeteRequest]" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EndPoint="[serviceDeskUrl]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="HttpClient_3" Method="POST" Result="[ResResultCreate]" StatusCode="[stsCodeCreate]" TimeoutMS="6000">
+      <ui:HttpClient.Attachments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Attachments>
+      <ui:HttpClient.Cookies>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Cookies>
+      <ui:HttpClient.Headers>
+        <InArgument x:TypeArguments="x:String" x:Key="Content-Type">text/xml</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="SOAPAction">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:HttpClient.Headers>
+      <ui:HttpClient.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.Parameters>
+      <ui:HttpClient.UrlSegments>
+        <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+      </ui:HttpClient.UrlSegments>
+    </ui:HttpClient>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[stsCodeCreate]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_10" Level="Info" Message="[ResResultCreate]" />
+    <If Condition="[stsCodeCreate=200]" sap:VirtualizedContainerService.HintSize="484,560" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,383" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="RequestId" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:DeserializeXml DisplayName="Deserialize XML" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeXml_3" XMLDocument="[xDocumentCraete]" XMLString="[ResResultCreate]" />
+          <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[RequestId]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[xDocumentCraete.Descendants(xname+"createRequestResponse").Elements("newRequestNumber").Value]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Info" Message="[&quot;RequestId:&quot;+RequestId]" />
+        </Sequence>
+      </If.Then>
+    </If>
+  </Sequence>
+</Activity>

@@ -1,0 +1,58 @@
+{
+  "name": "BH_CG_TPS_SC_10_B_Performer",
+  "description": "BH_CG_TPS_SC_10_B_Performer get the items in queue, create the report and send it to the final customer",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Microsoft.Activities": "[1.0.1]",
+    "UiPath.Credentials.Activities": "[1.1.6479.13204]",
+    "UiPath.Database.Activities": "[1.2.6863.32528]",
+    "UiPath.Excel.Activities": "[2.5.1]",
+    "UiPath.FTP.Activities": "[1.0.6479.13206]",
+    "UiPath.IntelligentOCR.Activities": "[1.3.0]",
+    "UiPath.Java.Activities": "[1.0.6863.33114]",
+    "UiPath.Mail.Activities": "[1.9.3]",
+    "UiPath.PDF.Activities": "[1.3.0]",
+    "UiPath.Python.Activities": "[1.0.6716.23055]",
+    "UiPath.System.Activities": "[19.10.1]",
+    "UiPath.Terminal.Activities": "[1.3.0]",
+    "UiPath.UIAutomation.Activities": "[18.4.4]",
+    "UiPath.WebAPI.Activities": "[1.4.5]"
+  },
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "20.4.1.0",
+  "projectVersion": "1.0.54",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfos": []
+  },
+  "arguments": {
+    "input": [],
+    "output": []
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "97130b44-63e4-4299-878a-bf87b7da6709",
+      "input": [],
+      "output": []
+    }
+  ]
+}
